@@ -12,4 +12,5 @@ INSERT INTO users VALUES
 ('Mariam', 20),
 ('Ani', 50),
 ('Nini', 70),
-('Luka', 90)
+('Luka', 90),
+('Elene', 91)
