@@ -1,17 +1,13 @@
 USE myDatabase;
 
--- remove table if it already exists and start from scratch
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
     user_name CHAR(64),
-    quiz_taken INTEGER
+    user_password CHAR(64),
+    quiz_taken BIGINT
 );
 
 INSERT INTO users VALUES
-('Mariam', 20),
-('Ani', 50),
-('Nini', 70),
-('Luka', 90),
-('Elene', 91),
-('Levani', 100)
+('Mariam', 'password1', 20),
+('Ani', 'password2', 50)
