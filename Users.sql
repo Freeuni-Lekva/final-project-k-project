@@ -11,4 +11,4 @@ CREATE TABLE users (
 INSERT INTO users VALUES
 ('Mariam', 20),
 ('Ani', 50),
-('Nika', 35)
+('Nini', 70)
