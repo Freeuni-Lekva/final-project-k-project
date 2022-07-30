@@ -1,4 +1,6 @@
-USE mydatabase;
+USE myDatabase;
+
+SET FOREIGN_KEY_CHECKS = 0;
 
 DROP TABLE IF EXISTS users;
 
@@ -12,3 +14,5 @@ CREATE TABLE users (
 
 INSERT INTO users VALUES
     ('00000000000', 'Ani', 'Odishelidze', 1);
+
+SET FOREIGN_KEY_CHECKS = 1;
