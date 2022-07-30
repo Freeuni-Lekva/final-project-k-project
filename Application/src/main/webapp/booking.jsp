@@ -39,8 +39,7 @@
     <pre>
         <form action="Booking">
             <div> <span style="font-size: 200%; "> Add Pool And Gym </span> </div>
-            <input type="checkbox" name="choosepool" value="Pool"> Pool <BR>
-            <input type="checkbox" name="choosegym" value="Gym"> Gym <BR>
+            <input type="checkbox" name="choosepoolandgym" value="Pool"> Pool And Gym <BR>
         </form>
     </pre>
 
