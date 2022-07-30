@@ -10,4 +10,9 @@
     <url-pattern>/Booking</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>addUser</servlet-name>
+    <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+
 </web-app>
