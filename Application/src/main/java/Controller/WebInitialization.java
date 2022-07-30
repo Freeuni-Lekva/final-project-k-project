@@ -1,6 +1,6 @@
 package Controller;
 
-import Application.src.main.java.Model.rooms;
+import Model.rooms;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

@@ -1,4 +1,4 @@
-package Application.src.main.java.Model;
+package Model;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -63,7 +63,7 @@ public class rooms {
                     rs.getString(10));
             tmp.add(p);
         }
-        res.removeIf(tmp::contains);
+        // res.removeIf(tmp::contains);
         return res;
     }
 
