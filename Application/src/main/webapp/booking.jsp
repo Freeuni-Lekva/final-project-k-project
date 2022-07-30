@@ -38,6 +38,14 @@
 
     <pre>
         <form action="Booking" method="get">
+            <div> <span style="font-size: 200%; "> Choose View </span> </div>
+            <input type="checkbox" name="chooseview" value="Hotel garden"> Hotel Garden <BR>
+            <input type="checkbox" name="chooseview" value="Woods"> Woods <BR>
+        </form>
+    </pre>
+
+    <pre>
+        <form action="Booking" method="get">
             <div> <span style="font-size: 200%; "> Add Pool And Gym </span> </div>
             <input type="checkbox" name="choosepoolandgym" value="Pool"> Pool And Gym <BR>
         </form>
