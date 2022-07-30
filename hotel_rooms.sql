@@ -1,6 +1,6 @@
-USE products_database;
+USE myDatabase;
 
-DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS hotel_rooms;
 -- remove table if it already exists and start from scratch
 
 CREATE TABLE hotel_rooms (
