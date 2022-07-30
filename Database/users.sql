@@ -1,4 +1,4 @@
-USE myDatabase;
+USE mydatabase;
 
 DROP TABLE IF EXISTS users;
 
@@ -7,7 +7,7 @@ CREATE TABLE users (
     user_name CHAR(64) NOT NULL,
     user_surname CHAR(64) NOT NULL,
     room_number INTEGER NOT NULL,
-    CONSTRAINT Reservation FOREIGN KEY (user_id) REFERENCES hotel_rooms(booked_by)
+    PRIMARY KEY (user_id)
 );
 
 INSERT INTO users VALUES
