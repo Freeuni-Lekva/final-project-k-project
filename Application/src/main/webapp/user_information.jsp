@@ -6,7 +6,7 @@
 <body>
 <Pre>
   <div> <span style="font-size: 200%; "> Fill In Your Information </span> </div>
-  <form action="UserValidity" method="post">
+  <form action="UserValidity" method="get">
   <pre> <label for="mail"> Your E-Mail: </label> </pre>
       <input type="text" name="dob" id="mail">
   <pre> <label for="phone_number"> Your Phone Number: </label> </pre>

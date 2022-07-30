@@ -11,6 +11,7 @@ import java.io.IOException;
 public class addUser extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        String user_mail = request.getParameter("mail");
+        String user_phone_number = request.getParameter("phone_number");
     }
 }
