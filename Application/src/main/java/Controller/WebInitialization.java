@@ -26,10 +26,12 @@ public class WebInitialization implements ServletContextListener, HttpSessionLis
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
+
     }
 
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
+
     }
 
     @Override
