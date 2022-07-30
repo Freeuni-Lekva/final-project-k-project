@@ -19,11 +19,10 @@
     <Pre>
         <div> <span style="font-size: 200%; "> Choose Dates </span> </div>
         <form action="Booking">
-        <li> <label for="check_in"> Check In Date: </label> </li>
+        <pre> <label for="check_in"> Check In Date: </label> </pre>
             <input type="text" name="dob" id="check_in">
-        <li> <label for="check_out"> Check Out Date: </label> </li>
+        <pre> <label for="check_out"> Check Out Date: </label> </pre>
             <input type="text" name="dob" id="check_out">
-        <pre> <input type="submit" value="Submit"> </pre>
         </form>
     </pre>
 
