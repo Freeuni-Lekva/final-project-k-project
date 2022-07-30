@@ -1,4 +1,4 @@
-USE myDatabase;
+USE mydatabase;
 
 DROP TABLE IF EXISTS hotel_rooms;
 -- remove table if it already exists and start from scratch
@@ -18,9 +18,7 @@ CREATE TABLE hotel_rooms (
                              check_in_date DATE ,
                              check_out_date DATE ,
                              booked_by CHAR(64),
-                             PRIMARY KEY (room_id),
-                             CONSTRAINT Reservation FOREIGN KEY (booked_by)
-                                 REFERENCES users(user_id)
+                             PRIMARY KEY (room_id)
 );
 
 INSERT INTO hotel_rooms VALUES
@@ -58,3 +56,5 @@ INSERT INTO hotel_rooms VALUES
                             (32, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+', '-', null , null , null ),
                             (33, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+', '-', null , null , null ),
                             (34, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+', '-', null , null , null );
+
+ALTER TABLE hotel_rooms ADD CONSTRAINT Reservation FOREIGN KEY (booked_by) REFERENCES users(user_id);
