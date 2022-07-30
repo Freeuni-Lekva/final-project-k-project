@@ -18,17 +18,16 @@
 <body>
     <Pre>
         <div> <span style="font-size: 200%; "> Choose Dates </span> </div>
-        <form action="Booking">
-        <li> <label for="check_in"> Check In Date: </label> </li>
+        <form action="Booking" method="get">
+        <pre> <label for="check_in"> Check In Date: </label> </pre>
             <input type="text" name="dob" id="check_in">
-        <li> <label for="check_out"> Check Out Date: </label> </li>
+        <pre> <label for="check_out"> Check Out Date: </label> </pre>
             <input type="text" name="dob" id="check_out">
-        <pre> <input type="submit" value="Submit"> </pre>
         </form>
     </pre>
 
     <pre>
-        <form action="Booking">
+        <form action="Booking" method="get">
             <div> <span style="font-size: 200%; "> Choose Rooms </span> </div>
             <input type="checkbox" name="chooseroom" value="Single Room"> Single Room <BR>
             <input type="checkbox" name="chooseroom" value="Double Room"> Double Room <BR>
@@ -38,22 +37,29 @@
     </pre>
 
     <pre>
-        <form action="Booking">
-            <div> <span style="font-size: 200%; "> Add Pool And Gym </span> </div>
-            <input type="checkbox" name="choosepool" value="Pool"> Pool <BR>
-            <input type="checkbox" name="choosegym" value="Gym"> Gym <BR>
+        <form action="Booking" method="get">
+            <div> <span style="font-size: 200%; "> Choose View </span> </div>
+            <input type="checkbox" name="chooseview" value="Hotel garden"> Hotel Garden <BR>
+            <input type="checkbox" name="chooseview" value="Woods"> Woods <BR>
         </form>
     </pre>
 
     <pre>
-        <form action="Booking">
+        <form action="Booking" method="get">
+            <div> <span style="font-size: 200%; "> Add Pool And Gym </span> </div>
+            <input type="checkbox" name="choosepoolandgym" value="Pool"> Pool And Gym <BR>
+        </form>
+    </pre>
+
+    <pre>
+        <form action="Booking" method="get">
             <div> <span style="font-size: 200%; "> Meals (Includes breakfast, lunch, dinner) </span> </div>
             <input type="checkbox" name="choosemeal" value="Meals"> Meals <BR>
         </form>
     </pre>
 
     <pre>
-        <form action="Booking">
+        <form action="Booking" method="get">
             <div> <span style="font-size: 200%; "> Finish Reservation </span> </div>
             <input type="submit" value="Finish Reservation">
         </form>

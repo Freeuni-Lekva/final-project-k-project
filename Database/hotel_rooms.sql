@@ -1,4 +1,4 @@
-USE mydatabase;
+USE myDatabase;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -39,6 +39,7 @@ INSERT INTO hotel_rooms VALUES
     (18, 'Double room', 400, 435, 500, '+', '+', '+', 'Woods', '+'),
     (19, 'Double room', 400, 435, 500, '+', '+', '+', 'Woods', '+'),
     (20, 'Double room', 400, 435, 500, '+', '+', '+', 'Woods', '+'),
+<<<<<<< HEAD
     (21, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
     (22, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
     (23, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
@@ -54,3 +55,19 @@ INSERT INTO hotel_rooms VALUES
     (33, 'Deluxe room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+'),
     (34, 'Deluxe room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+');
 
+=======
+    (21, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
+    (22, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
+    (23, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
+    (24, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
+    (25, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
+    (26, 'Triple room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
+    (27, 'Triple room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
+    (28, 'Triple room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
+    (29, 'Triple room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
+    (30, 'Triple room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
+    (31, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+'),
+    (32, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+'),
+    (33, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+'),
+    (34, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+');
+>>>>>>> aa13b6a5a47a8505c5a97596e45cd4acb097ed03

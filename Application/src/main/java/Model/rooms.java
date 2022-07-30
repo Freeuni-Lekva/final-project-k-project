@@ -63,7 +63,7 @@ public class rooms {
                     rs.getString(10));
             tmp.add(p);
         }
-        res.removeIf(tmp::contains);
+        // res.removeIf(tmp::contains);
         return res;
     }
 

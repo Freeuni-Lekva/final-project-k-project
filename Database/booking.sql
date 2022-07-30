@@ -1,4 +1,4 @@
-USE mydatabase;
+USE myDatabase;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
