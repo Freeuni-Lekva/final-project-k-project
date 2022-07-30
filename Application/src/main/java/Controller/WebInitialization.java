@@ -1,4 +1,4 @@
-package Application.src.main.java.Controller;
+package Controller;
 
 import Application.src.main.java.Model.rooms;
 
