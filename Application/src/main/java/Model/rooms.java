@@ -67,24 +67,25 @@ public class rooms {
         return res;
     }
 
-    public void checkIn(String personId, int roomId, String in, String out, String includes) throws SQLException {
+    public void checkIn(String mail, int roomId, String in, String out, String included) throws SQLException {
         String query = "INSERT INTO mydatabase.bookings VALUES(?,?,?,?,?,?,?);";
         PreparedStatement ps = dbCon.prepareStatement(query);
         ps.setInt(1, booking_num);
         ps.setInt(2,roomId);
-        ps.setString(3,personId);
+        ps.setString(3,mail);
         ps.setDate(4,Date.valueOf(in));
         ps.setDate(5,Date.valueOf(out));
-        // price
+        // hoteRoom = roomId
+        // price included
         //total price
 
         ps.executeUpdate();
     }
 
-    public void checkOut(int userId) throws SQLException {
-        String q = "DELETE FROM mydatabase.users WHERE user_id = ?";
+    public void checkOut(int mail) throws SQLException {
+        String q = "DELETE FROM mydatabase.users WHERE user_mail = ?";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
-        ps.setInt(1,userId);
+        ps.setInt(1,mail);
         ps.executeUpdate();
     }
 }

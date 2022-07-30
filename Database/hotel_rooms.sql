@@ -1,4 +1,4 @@
-USE myDatabase;
+USE mydatabase;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -53,3 +53,4 @@ INSERT INTO hotel_rooms VALUES
     (32, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+'),
     (33, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+'),
     (34, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+');
+
