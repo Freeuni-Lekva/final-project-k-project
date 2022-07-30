@@ -57,4 +57,4 @@ INSERT INTO hotel_rooms VALUES
                             (31, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+', '-', null , null , null ),
                             (32, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+', '-', null , null , null ),
                             (33, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+', '-', null , null , null ),
-                            (34, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+', '-', null , null , null )
+                            (34, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+', '-', null , null , null );
