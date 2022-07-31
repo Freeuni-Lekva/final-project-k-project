@@ -25,7 +25,7 @@ public class Booking extends HttpServlet {
         String room_type = request.getParameter("choose_room");
         String room_view = request.getParameter("choose_view");
 
-        System.out.println(check_in);
+        //System.out.println(check_in);
         System.out.println(check_out);
         System.out.println(room_type);
         System.out.println(room_view);
