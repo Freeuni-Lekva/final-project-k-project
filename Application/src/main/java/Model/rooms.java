@@ -12,7 +12,7 @@ public class rooms {
             dbCon = DriverManager.getConnection(
                     "jdbc:mysql://localhost",
                     "root",
-                    "mkulo");
+                    "PurpleHyacinth-04");
             Statement useDbStm = dbCon.createStatement();
             useDbStm.execute("USE " + name);
         } catch (SQLException | ClassNotFoundException e) {
@@ -51,7 +51,7 @@ public class rooms {
     public ArrayList<hotelRoom> availableRooms(String type, String view, String in, String out) throws SQLException {
         ArrayList<hotelRoom> res = preferences(type, view);
         ArrayList<hotelRoom> tmp = new ArrayList<>();
-        String q = "SELECT * From mydatabase.bookings WHERE check_in_date >= ? and check_out_date <= ?";
+        String q = "SELECT * From mydatabase.bookings WHERE check_in_date >= in and check_out_date <= out";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ps.setDate(1,Date.valueOf(in));
         ps.setDate(2,Date.valueOf(out));
