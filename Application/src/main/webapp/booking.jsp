@@ -24,7 +24,7 @@
                 <input type="text" name="check_out" id="check_out">
 
                 <div> <span style="font-size: 200%; "> Choose Rooms </span> </div>
-                <input type="checkbox" name="choose_room" value="Single Room"> Double Room <BR>
+                <input type="checkbox" name="choose_room" value="Single Room"> Single Room <BR>
                 <input type="checkbox" name="choose_room" value="Double Room"> Double Room <BR>
                 <input type="checkbox" name="choose_room" value="Twin Room"> Twin Room <BR>
                 <input type="checkbox" name="choose_room" value="Deluxe Room"> Deluxe Room <BR>
