@@ -7,7 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "addUser", urlPatterns = {"/addUser"})
@@ -18,8 +17,12 @@ public class addUser extends HttpServlet {
         String surname = request.getParameter("surname");
         String mail = request.getParameter("mail");
         String phone_number = request.getParameter("phone_number");
-        HttpSession currentSession = request.getSession();
-        User currentUser = (User) currentSession.getAttribute("currentUser");
+
+        User currentUser = (User) request.getSession().getAttribute("currentUser");
+        currentUser.setUserName(name);
+        currentUser.setUserSurname(surname);
+        currentUser.setMail(mail);
+        currentUser.setPhoneNumber(phone_number);
 
         // Adding name, surname, mail, phone_number to the users table.
         /*try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {

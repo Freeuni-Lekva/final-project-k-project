@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,6 +30,13 @@ public class Booking extends HttpServlet {
 
         // Checking if this type of room is free.
         // if (free) -> request.getRequestDispatcher("user_information.jsp").forward(request, response);
+        User newUser = (User) request.getSession().getAttribute("currentUser");
+        newUser.setCheckInDate(check_in);
+        newUser.setCheckOutDate(check_out);
+        newUser.setRoomType(room_type);
+        newUser.setRoomView(room_view);
+        // newUser.setRoomId(room_id), room_id from the table.
+
         // else -> request.getRequestDispatcher("unsuccessful_reservation.jsp").forward(request, response);
     }
 }
