@@ -51,7 +51,7 @@ public class rooms {
     public ArrayList<hotelRoom> availableRooms(String type, String view, String in, String out) throws SQLException {
         ArrayList<hotelRoom> helper = preferences(type, view);
         ArrayList<hotelRoom> tmp = new ArrayList<>();
-        String q = "SELECT * From mydatabase.bookings WHERE check_in_date >= ? and check_out_date <= ?";
+        String q = "SELECT * From mydatabase.bookings WHERE check_in_date >= in and check_out_date <= out";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ps.setDate(1,Date.valueOf(in));
         ps.setDate(2,Date.valueOf(out));
