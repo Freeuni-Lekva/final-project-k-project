@@ -50,8 +50,8 @@ public class hotelRoom {
 
     public int getPrice(String included){
         if(included.equals("INCLUDES MEAL")) return priceWithMeal;
-        if(included.equals("INCLUDES POOL AND GYM")) return priceWithPoolAndGym;
-        if(included.equals("INCLUDES MEAL, POOL AND GYM")){
+        if(included.equals("INCLUDES POOL GYM")) return priceWithPoolAndGym;
+        if(included.equals("INCLUDES POOL GYM MEAL")){
             return priceWithPoolAndGym + priceWithMeal - pricePerDay;
         }
         return pricePerDay;
@@ -59,5 +59,9 @@ public class hotelRoom {
 
     public String getView(){
         return view;
+    }
+
+    public int getID() {
+        return roomId;
     }
 }

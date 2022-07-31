@@ -1,7 +1,5 @@
-package Controller;
+package Model;
 
-import Model.User;
-import Model.rooms;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -34,7 +32,7 @@ public class WebInitialization implements ServletContextListener, HttpSessionLis
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
         HttpSession session = httpSessionEvent.getSession();
-        User currentUser = new User();
+        User currentUser = new User("myDatabase");
         session.setAttribute("currentUser", currentUser);
     }
 

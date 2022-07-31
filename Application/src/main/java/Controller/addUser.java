@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet(name = "addUser", urlPatterns = {"/addUser"})
 public class addUser extends HttpServlet {
@@ -23,6 +24,11 @@ public class addUser extends HttpServlet {
         currentUser.setUserSurname(surname);
         currentUser.setMail(mail);
         currentUser.setPhoneNumber(phone_number);
+        try {
+            currentUser.addUser();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         // Adding name, surname, mail, phone_number to the users table.
         /*try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
