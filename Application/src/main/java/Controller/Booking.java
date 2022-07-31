@@ -25,5 +25,9 @@ public class Booking extends HttpServlet {
         if (meal != null) {
             includes_pool_gym_meal += " MEAL";
         }
+
+        // Checking if this type of room is free.
+        // if (free) -> request.getRequestDispatcher("user_information.jsp").forward(request, response);
+        // else -> request.getRequestDispatcher("unsuccessful_reservation.jsp").forward(request, response);
     }
 }

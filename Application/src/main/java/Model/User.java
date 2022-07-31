@@ -1,6 +1,9 @@
 package Model;
 
 public class User {
+
+    private String userName;
+    private String userSurname;
     private String roomId;
     private String roomType;
     private String roomView;
@@ -9,14 +12,24 @@ public class User {
     private String mail;
     private String phoneNumber;
 
-    public User(String room_id, String room_type, String room_view, String check_in_date, String check_out_date) {
-        this.roomId = room_id;
-        this.roomType = room_type;
-        this.roomView = room_view;
-        this.checkInDate = check_in_date;
-        this.checkOutDate = check_out_date;
+    public User() {
+        this.userName = null;
+        this.userSurname = null;
+        this.roomId = null;
+        this.roomType = null;
+        this.roomView = null;
+        this.checkInDate = null;
+        this.checkOutDate = null;
         this.mail = null;
         this.phoneNumber = null;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getUserSurname() {
+        return userSurname;
     }
 
     public String getRoomId() {
@@ -45,6 +58,34 @@ public class User {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setUserSurname(String userSurname) {
+        this.userSurname = userSurname;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
+
+    public void setRoomView(String roomView) {
+        this.roomView = roomView;
+    }
+
+    public void setCheckInDate(String checkInDate) {
+        this.checkInDate = checkInDate;
+    }
+
+    public void setCheckOutDate(String checkOutDate) {
+        this.checkOutDate = checkOutDate;
     }
 
     public void setMail(String mail) {
