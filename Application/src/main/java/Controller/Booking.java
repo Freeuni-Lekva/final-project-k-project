@@ -25,15 +25,20 @@ public class Booking extends HttpServlet {
         String room_type = request.getParameter("choose_room");
         String room_view = request.getParameter("choose_view");
 
-        System.out.println(check_in);
+        /*System.out.println(check_in);
+        System.out.println(check_out);
+        System.out.println(room_type);
+        System.out.println(room_view);*/
 
         String pool_and_gym = request.getParameter("choose_pool_and_gym");
+        //System.out.println(pool_and_gym);
         String includes_pool_gym_meal = "INCLUDES ";
         if (pool_and_gym != null) {
             includes_pool_gym_meal += "POOL GYM";
         }
 
         String meal = request.getParameter("choose_meal");
+        //System.out.println(meal);
         if (meal != null) {
             includes_pool_gym_meal += " MEAL";
         }
