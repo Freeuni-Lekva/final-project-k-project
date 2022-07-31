@@ -1,11 +1,9 @@
 package Controller;
 
-<<<<<<< HEAD
+
 import Model.hotelRoom;
 import Model.rooms;
-=======
 import Model.User;
->>>>>>> cd688b674ecf9243c5bf092b74588bc216c36a32
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +33,6 @@ public class Booking extends HttpServlet {
             includes_pool_gym_meal += " MEAL";
         }
 
-<<<<<<< HEAD
         rooms rooms = null;
         try {
             rooms = new rooms("myDatabase");
@@ -45,27 +42,29 @@ public class Booking extends HttpServlet {
 
         ArrayList<hotelRoom> tmp = null;
         try {
+            assert rooms != null;
             tmp = rooms.availableRooms(room_type,room_view,check_in,check_out);
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        if(tmp.size() == 0){
-            request.getRequestDispatcher("unsuccessful_reservation.jsp").forward(request, response);
-        }else{
-            request.getRequestDispatcher("user_information.jsp").forward(request, response);
-        }
-=======
+
         // Checking if this type of room is free.
         // if (free) -> request.getRequestDispatcher("user_information.jsp").forward(request, response);
-        User newUser = (User) request.getSession().getAttribute("currentUser");
-        newUser.setCheckInDate(check_in);
-        newUser.setCheckOutDate(check_out);
-        newUser.setRoomType(room_type);
-        newUser.setRoomView(room_view);
-        // newUser.setRoomId(room_id), room_id from the table.
-
-        // else -> request.getRequestDispatcher("unsuccessful_reservation.jsp").forward(request, response);
->>>>>>> cd688b674ecf9243c5bf092b74588bc216c36a32
+        assert tmp != null;
+        if(tmp.size() == 0){
+            // else -> request.getRequestDispatcher("unsuccessful_reservation.jsp").forward(request, response);
+            request.getRequestDispatcher("unsuccessful_reservation.jsp").forward(request, response);
+        }else{
+            User newUser = (User) request.getSession().getAttribute("currentUser");
+            newUser.setCheckInDate(check_in);
+            newUser.setCheckOutDate(check_out);
+            newUser.setRoomType(room_type);
+            newUser.setRoomView(room_view);
+            newUser.setPreferences(includes_pool_gym_meal);
+            // newUser.setRoomId(room_id), room_id from the table.
+            newUser.setRoomId(tmp.get(0));
+            request.getRequestDispatcher("user_information.jsp").forward(request, response);
+        }
     }
 }

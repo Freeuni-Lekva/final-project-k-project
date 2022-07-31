@@ -60,4 +60,8 @@ public class hotelRoom {
     public String getView(){
         return view;
     }
+
+    public int getID() {
+        return roomId;
+    }
 }
