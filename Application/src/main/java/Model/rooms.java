@@ -3,9 +3,10 @@ package Model;
 import java.sql.*;
 import java.util.ArrayList;
 
+import static Model.WebInitialization.booking_num;
+
 public class rooms {
     private Connection dbCon;
-    private int booking_num;
     public rooms(String name) throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -18,7 +19,6 @@ public class rooms {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        booking_num = 0;
     }
 
     private ArrayList<hotelRoom> getRooms() throws SQLException {
@@ -54,7 +54,6 @@ public class rooms {
         // String q = "SELECT * From bookings WHERE check_in_date>=\"" + in + "\"and check_out_date<=\"" + out + "\";";
         String q = "SELECT * From myDatabase.bookings WHERE check_in_date>=? and check_out_date<=?;";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
-        System.out.println(in);
         ps.setDate(1,Date.valueOf(in));
         ps.setDate(2,Date.valueOf(out));
         ResultSet rs = ps.executeQuery();
@@ -76,7 +75,6 @@ public class rooms {
 
     // getParameter("picker"); String date = request.getParameter("datepicker");
     public void booking(String mail, int roomId, String in, String out, String included) throws SQLException {
-        System.out.println(mail);
         String query = "INSERT INTO myDatabase.bookings VALUES(?,?,?,?,?,?,?);";
         PreparedStatement ps = dbCon.prepareStatement(query);
         ps.setInt(1, booking_num);

@@ -12,6 +12,7 @@ import java.sql.SQLException;
 
 @WebListener
 public class WebInitialization implements ServletContextListener, HttpSessionListener {
+    public static int booking_num;
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         rooms hotelRooms = null;
@@ -34,6 +35,7 @@ public class WebInitialization implements ServletContextListener, HttpSessionLis
         HttpSession session = httpSessionEvent.getSession();
         User currentUser = new User("myDatabase");
         session.setAttribute("currentUser", currentUser);
+        booking_num = 1;
     }
 
     @Override
