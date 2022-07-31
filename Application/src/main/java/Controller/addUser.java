@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.User;
+import Model.rooms;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,6 +31,19 @@ public class addUser extends HttpServlet {
             e.printStackTrace();
         }
 
+        rooms rooms = null;
+        try {
+            rooms = new rooms("myDatabase");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            rooms.booking(currentUser.getMail(), currentUser.getRoomId().getID(),
+                    currentUser.getCheckInDate(), currentUser.getCheckOutDate(), currentUser.getPreferences());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         // Adding name, surname, mail, phone_number to the users table.
         /*try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
             Statement stmt = conn.createStatement();

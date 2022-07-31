@@ -49,9 +49,9 @@ public class rooms {
     }
 
     public ArrayList<hotelRoom> availableRooms(String type, String view, String in, String out) throws SQLException {
-        ArrayList<hotelRoom> res = preferences(type, view);
+        ArrayList<hotelRoom> helper = preferences(type, view);
         ArrayList<hotelRoom> tmp = new ArrayList<>();
-        String q = "SELECT * From mydatabase.bookings WHERE check_in_date >= in and check_out_date <= out";
+        String q = "SELECT * From mydatabase.bookings WHERE check_in_date >= ? and check_out_date <= ?";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ps.setDate(1,Date.valueOf(in));
         ps.setDate(2,Date.valueOf(out));
@@ -63,7 +63,12 @@ public class rooms {
                     rs.getString(10));
             tmp.add(p);
         }
-        // res.removeIf(tmp::contains);
+        ArrayList<hotelRoom> res = new ArrayList<>();
+        for (int i = 0; i < helper.size(); i++){
+            if(!tmp.contains(helper.get(i))){
+                res.add(helper.get(i));
+            }
+        }
         return res;
     }
 
@@ -80,6 +85,7 @@ public class rooms {
         ps.setInt(6,hr.getPrice(included));
         ps.setInt(7,0);
         ps.executeUpdate();
+        booking_num += 1;
     }
 
     private hotelRoom getHotelRoom(int roomId) throws SQLException {
