@@ -4,9 +4,6 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-<<<<<<< HEAD
-</web-app>
-=======
 
   <servlet-mapping>
     <servlet-name>Booking</servlet-name>
@@ -19,4 +16,3 @@
   </servlet-mapping>
 
 </web-app>
->>>>>>> aa13b6a5a47a8505c5a97596e45cd4acb097ed03

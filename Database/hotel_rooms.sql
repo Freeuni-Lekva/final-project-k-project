@@ -39,23 +39,6 @@ INSERT INTO hotel_rooms VALUES
     (18, 'Double room', 400, 435, 500, '+', '+', '+', 'Woods', '+'),
     (19, 'Double room', 400, 435, 500, '+', '+', '+', 'Woods', '+'),
     (20, 'Double room', 400, 435, 500, '+', '+', '+', 'Woods', '+'),
-<<<<<<< HEAD
-    (21, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
-    (22, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
-    (23, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
-    (24, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
-    (25, 'Twin room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
-    (26, 'Twin room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
-    (27, 'Twin room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
-    (28, 'Twin room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
-    (29, 'Twin room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
-    (30, 'Twin room', 500, 535, 600, '+', '+', '+', 'Woods', '+'),
-    (31, 'Deluxe room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+'),
-    (32, 'Deluxe room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+'),
-    (33, 'Deluxe room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+'),
-    (34, 'Deluxe room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+');
-
-=======
     (21, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
     (22, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
     (23, 'Triple room', 500, 535, 600, '+', '+', '+', 'Hotel garden', '+'),
@@ -70,4 +53,3 @@ INSERT INTO hotel_rooms VALUES
     (32, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Hotel garden', '+'),
     (33, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+'),
     (34, 'Lux room', 1000, 1100, 1300, '+', '+', '+', 'Woods', '+');
->>>>>>> aa13b6a5a47a8505c5a97596e45cd4acb097ed03
