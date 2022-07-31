@@ -1,0 +1,18 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet-mapping>
+    <servlet-name>Booking</servlet-name>
+    <url-pattern>/Booking</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>addUser</servlet-name>
+    <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+
+</web-app>
