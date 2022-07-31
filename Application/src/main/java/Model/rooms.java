@@ -23,7 +23,7 @@ public class rooms {
 
     private ArrayList<hotelRoom> getRooms() throws SQLException {
         ArrayList<hotelRoom> tmp = new ArrayList<>();
-        String q = "SELECT * FROM hotel_rooms";
+        String q = "SELECT * FROM myDatabase.hotel_rooms";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ResultSet rs = ps.executeQuery();
         while(rs.next()){
@@ -52,7 +52,7 @@ public class rooms {
         ArrayList<hotelRoom> helper = preferences(type, view);
         ArrayList<hotelRoom> tmp = new ArrayList<>();
         // String q = "SELECT * From bookings WHERE check_in_date>=\"" + in + "\"and check_out_date<=\"" + out + "\";";
-        String q = "SELECT * From bookings WHERE check_in_date>=? and check_out_date<=?;";
+        String q = "SELECT * From myDatabase.bookings WHERE check_in_date>=? and check_out_date<=?;";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         System.out.println(in);
         ps.setDate(1,Date.valueOf(in));
@@ -76,7 +76,8 @@ public class rooms {
 
     // getParameter("picker"); String date = request.getParameter("datepicker");
     public void booking(String mail, int roomId, String in, String out, String included) throws SQLException {
-        String query = "INSERT INTO mydatabase.bookings VALUES(?,?,?,?,?,?,?);";
+        System.out.println(mail);
+        String query = "INSERT INTO myDatabase.bookings VALUES(?,?,?,?,?,?,?);";
         PreparedStatement ps = dbCon.prepareStatement(query);
         ps.setInt(1, booking_num);
         ps.setInt(2,roomId);
@@ -91,7 +92,7 @@ public class rooms {
     }
 
     private hotelRoom getHotelRoom(int roomId) throws SQLException {
-        String q = "SELECT * FROM mydatabase.hotel_rooms WHERE room_id = ?";
+        String q = "SELECT * FROM hotel_rooms WHERE room_id = ?";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ps.setInt(1, roomId);
         ResultSet rs = ps.executeQuery();
@@ -105,7 +106,7 @@ public class rooms {
     }
 
     public void checkOut(int mail) throws SQLException {
-        String q = "DELETE FROM mydatabase.users WHERE user_mail = ?";
+        String q = "DELETE FROM users WHERE user_mail = ?";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ps.setInt(1,mail);
         ps.executeUpdate();

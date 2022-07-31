@@ -12,4 +12,4 @@ CREATE TABLE users (
 );
 
 INSERT INTO users VALUES
-    ('00000000000', 'Ani', 'Odishelidze');
+    ('aodis@gimili.com', 'Ani', 'Odishelidze');

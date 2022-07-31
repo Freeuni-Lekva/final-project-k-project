@@ -32,7 +32,7 @@ public class User {
             dbCon = DriverManager.getConnection(
                     "jdbc:mysql://localhost",
                     "root",
-                    "mkulo");
+                    "PurpleHyacinth-04");
             Statement useDbStm = dbCon.createStatement();
             useDbStm.execute("USE " + name);
         } catch (SQLException | ClassNotFoundException e) {
@@ -41,12 +41,12 @@ public class User {
     }
 
     public void addUser() throws SQLException {
-        String q = "INSERT INTO mydatabase.users(user_mail, user_name, user_surname, room_number) VALUES(?,?,?,?)";
+        String q = "INSERT INTO myDatabase.users(user_mail, user_name, user_surname) VALUES(?,?,?)";
         PreparedStatement ps = dbCon.prepareStatement(q,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ps.setString(1,mail);
         ps.setString(2,userName);
         ps.setString(3,userSurname);
-        ps.setInt(4,room.getID());
+        //ps.setInt(3,room.getID());
         ps.executeUpdate();
     }
 

@@ -39,6 +39,7 @@ public class addUser extends HttpServlet {
         }
 
         try {
+            assert rooms != null;
             rooms.booking(currentUser.getMail(), currentUser.getRoomId().getID(),
                     currentUser.getCheckInDate(), currentUser.getCheckOutDate(), currentUser.getPreferences());
         } catch (SQLException e) {
